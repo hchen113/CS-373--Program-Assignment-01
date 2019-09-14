@@ -63,8 +63,28 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "prog1_sample.txt &apos;$01$&apos; 500"
+            argument = "p1_sample1.txt _00111__ 25"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "p1_sample1.txt _0011__ 100"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "prog1_sample.txt &apos;$00011$&apos; 500"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "prog1_sample.txt &apos;$00011$&apos; 10"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "prog1_sample.txt &apos;$01$&apos; 500"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "prog1_sample.txt &apos;$000111$&apos; 500"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
