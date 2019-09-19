@@ -63,8 +63,16 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "p1_sample1.txt _00111__ 25"
+            argument = "p1_sample1.txt ______________0110_ 24"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "p1_sample1.txt _001_________ 20"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "p1_sample1.txt _00111__ 25"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "p1_sample1.txt _0011__ 100"

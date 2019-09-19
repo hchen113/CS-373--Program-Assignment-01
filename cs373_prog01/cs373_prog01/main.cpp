@@ -40,7 +40,17 @@ result run_turing_machine(vector<transitions> machine_transitions, int start, in
         //cout << "TRANSITION COUNT: " << transition_count << "\n";
         //cout << "Current State: " << state << " with char: " << input[char_count] << "\n";
         for (int i = 0; i < machine_transitions.size(); i++){
+            if (transition_count > trans_num){
+                //state = machine_transitions[i].state_2;
+                //solution.state.push_back(state);
+                solution.end_phase = "quit";
+                done = true;
+                //cout << "QUIT AT STATE " << state << "\n";
+                break;
+            }
             if(machine_transitions[i].state_1 == state && machine_transitions[i].symbol_1 == input[char_count]){
+                solution.state.push_back(state);
+                state = machine_transitions[i].state_2;
                 if (machine_transitions[i].state_2 == accept){
                     state = accept;
                     solution.state.push_back(accept);
@@ -57,16 +67,8 @@ result run_turing_machine(vector<transitions> machine_transitions, int start, in
                     //cout << "REJECT AT STATE " << state << "\n";
                     break;
                 }
-                if (transition_count > trans_num){
-                    //state = machine_transitions[i].state_2;
-                    //solution.state.push_back(state);
-                    solution.end_phase = "quit";
-                    done = true;
-                    //cout << "QUIT AT STATE " << state << "\n";
-                    break;
-                }
-                solution.state.push_back(state);
-                state = machine_transitions[i].state_2;
+                //solution.state.push_back(state);
+                //state = machine_transitions[i].state_2;
                 //cout << "TRANSITIONING TO STATE " << state << " , REPLACING " << input[char_count];
                 input[char_count] = machine_transitions[i].symbol_2;
                 //cout << " WITH " << input[char_count] << "\n";
